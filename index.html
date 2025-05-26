@@ -2,35 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Jordan</title>
-    <link rel="stylesheet" href="../jordan.css"/>
+    <meta name="viewpent="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Michael Jordan - NBA Legenda</title>
+    <meta name="description" content="Sužinokite apie Michaelą Jordaną, vieną geriausių visų laikų NBA žaidėjų.">
+    <meta name="keywords" content="Michael Jordan, NBA, krepšinis, Chicago Bulls, Washington Wizards, MVP, čempionas">
+    <link rel="stylesheet" href="jordan.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<section>   
-<div><center><h1>Michael Jordan</h1></center></div>
-<h2 class="facts">ONE OF THE GREATEST BASKETBALL NBA PLAYER</h2></div> 
-<div><p>PLAYED IN 1984-2003</p></div>
- <div><center><img src="../jordan.png" width="35%" height="35%"/></center></div>div>
-</section>
-<section>
-    <center><h1 class="info">PERSONAL INFORMATION</center>
-    </h1>
-<h2 style="color:#A50707;">Born- February 17, 1963 (age 58) Brooklyn, New York</h2>
-<h2 style="color: A50707;">Listed height 1.98 m - Listed weight 98 kg</h2>
-<h2 style="color: A50707;">Playing career	1984–1993, 1995–1998, 2001–2003</h2>
-<center><h1 class="info">CAREER HISTORY</center>
-    <h2 style="color:#A50707;">1984–1993 - Chicago Bulls</h2>
-    <h2 style="color:#A50707;">2001–2003 - Washington Wizard</h2>
-    <center><h1 class="info">CAREER NBA STATISTICS</center>
-    <h2 style="color:#A50707;">Points 32,292 (30.1 ppg) Rebounds 6,672 (6.2 rpg) Assists 5,633 (5.3 apg)</h2>
-    <center><h1 class="info" font-size: 30px>AWARDS</h1></center>
-    <h2 style="color:#A50707;">6×NBA champion (1991–1993, 1996–1998)</h2>
-    <h2 style="color:#A50707;">5× NBA Most Valuable Player (1988, 1991, 1992, 1996, 1998)</h2>
-    <h2 style="color:#A50707;">10× NBA scoring champion (1987–1993, 1996–1998)</h2>
-    <P>
-        
-    </P>
-</section>
- </html>
+    <header class="hero">
+        <div class="container">
+            <h1>Michael Jordan</h1>
+            <p class="tagline">VIENAS DIDŽIAUSIŲ NBA KREPŠININKŲ</p>
+            <p class="career-span">ŽAIDĖ 1984-2003 M.</p>
+            <figure class="jordan-image">
+                <img src="jordan.png"
+                     alt="Michaelas Jordanas veiksme"
+                     width="350" height="auto"
+                     loading="lazy"
+                     onerror="this.onerror=null; this.src='https://placehold.co/350x200/CCCCCC/000000?text=Paveikslėlis+Nerastas'; console.error('Klaida įkeliant jordan.png. Patikrinkite, ar failas egzistuoja tame pačiame kataloge.');">
+                <figcaption class="sr-only">Michaelo Jordano nuotrauka.</figcaption>
+            </figure>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-section personal-info">
+            <div class="container">
+                <h2 class="section-title">ASMENINĖ INFORMACIJA</h2>
+                <ul>
+                    <li><strong>Gimė:</strong> 1963 m. vasario 17 d. (58 metai) Brukline, Niujorke</li>
+                    <li><strong>Nurodytas ūgis:</strong> 1.98 m</li>
+                    <li><strong>Nurodytas svoris:</strong> 98 kg</li>
+                    <li><strong>Žaidimo karjera:</strong> 1984–1993, 1995–1998, 2001–2003</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-section career-history">
+            <div class="container">
+                <h2 class="section-title">KARJEROS ISTORIJA</h2>
+                <ul>
+                    <li><strong>1984–1993:</strong> Čikagos „Bulls“</li>
+                    <li><strong>2001–2003:</strong> Vašingtono „Wizards“</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-section career-stats">
+            <div class="container">
+                <h2 class="section-title">KARJEROS NBA STATISTIKA</h2>
+                <ul>
+                    <li><strong>Taškai:</strong> 32,292 (30.1 tšk. per rungtynes)</li>
+                    <li><strong>Atkovoti kamuoliai:</strong> 6,672 (6.2 atk. kam. per rungtynes)</li>
+                    <li><strong>Rezultatyvūs perdavimai:</strong> 5,633 (5.3 rez. perd. per rungtynes)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="info-section awards">
+            <div class="container">
+                <h2 class="section-title">APDOVANOJIMAI</h2>
+                <ul>
+                    <li><strong>6× NBA čempionas:</strong> (1991–1993, 1996–1998)</li>
+                    <li><strong>5× NBA naudingiausias žaidėjas:</strong> (1988, 1991, 1992, 1996, 1998)</li>
+                    <li><strong>10× NBA rezultatyviausias žaidėjas:</strong> (1987–1993, 1996–1998)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- <footer>
+        <div class="container">
+            <p>&copy; 2023 Michaelo Jordano gerbėjų puslapis. Visos teisės saugomos.</p>
+        </div>
+    </footer> -->
+</body>
+</html>

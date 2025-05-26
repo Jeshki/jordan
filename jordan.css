@@ -1,50 +1,150 @@
+/* CSS Reset/Normalize (Optional but Recommended) */
+/* This simple reset helps ensure consistent styling across different browsers */
+*, *::before, *::after {
+    box-sizing: border-box; /* Makes layout calculations easier and more predictable */
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default paddings */
+}
+
+/* CSS Variables (Custom Properties) for easier theme management */
+/* Define colors and fonts in one place for easy updates */
+:root {
+    --primary-background: #0B0808; /* Dark background color */
+    --accent-color: #A50707; /* Michael Jordan's iconic red */
+    --text-dark: #000; /* Dark text color for contrast on light backgrounds */
+    --text-light: #fff; /* Light text color for contrast on dark backgrounds */
+    --font-heading: 'fantasy', sans-serif; /* Font for main headings */
+    --font-body: 'monospace', sans-serif; /* Font for body text and sections */
+}
+
 body {
-    background-color: #0B0808;
-   
+    background-color: var(--primary-background); /* Apply primary background color */
+    color: var(--text-light); /* Default text color for the entire body */
+    font-family: var(--font-body); /* Apply body font */
+    line-height: 1.6; /* Improves readability by adding space between lines */
 }
 
-div {
-padding-top: 25px;
-padding-right: 25px;
-padding-bottom: 25px;
-padding-left: 25px;
-background-color: #A50707;
+/* Container for consistent content width and centering */
+.container {
+    max-width: 1000px; /* Maximum width of the content area */
+    margin: 0 auto; /* Centers the container horizontally */
+    padding: 20px; /* Padding around the content inside the container */
 }
 
-
-h1 {
-
-font-size: 50px;
-font-family: fantasy;
+/* Header/Hero Section Styling */
+.hero {
+    background-color: var(--accent-color); /* Red background for the hero section */
+    padding: 40px 20px; /* Top/bottom and left/right padding */
+    text-align: center; /* Center align text within the hero section */
+    margin-bottom: 20px; /* Space below the hero section */
+    border-radius: 8px; /* Slightly rounded corners for the hero section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-h2 {
-
-    text-align: center;
-    color: hsl(0, 92%, 34%);
-    font-family: monospace;
+.hero h1 {
+    /* Responsive font size using clamp(): min-size, preferred-size, max-size */
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-family: var(--font-heading); /* Apply heading font */
+    color: var(--text-dark); /* Dark text color for contrast on red background */
+    margin-bottom: 10px; /* Space below the main title */
 }
 
-p {
-font-size: 30px;
-text-align: center;
-color: black;
-font-weight: bold;
-font-family: monospace;
-
+.hero .tagline {
+    font-size: clamp(1.2rem, 4vw, 1.8rem); /* Responsive font size for tagline */
+    color: var(--text-dark);
+    font-weight: bold; /* Bold text */
+    font-family: var(--font-body);
+    margin-bottom: 5px; /* Space below tagline */
 }
 
-.info {
-align-self: center;
-    margin: 10px;
-    color: black;
-    background-color: #A50707;
-    width: 300px;
-    height: 27px;
-    text-align:center;
-    font-family: monospace;
-    font-size: 20px;
-      
-  }
+.hero .career-span {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Responsive font size for career span */
+    color: var(--text-dark);
+    font-weight: bold;
+    font-family: var(--font-body);
+    margin-bottom: 20px; /* Space below career span */
+}
 
- 
+/* Image Styling within Hero Section */
+.jordan-image img {
+    display: block; /* Ensures the image behaves as a block element */
+    max-width: 100%; /* Makes the image responsive, scaling down if needed */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 8px; /* Rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow around the image */
+    margin: 0 auto; /* Centers the image horizontally within its parent */
+}
+
+/* Utility class for screen reader only text (visually hidden) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Styling for general information sections */
+.info-section {
+    background-color: var(--accent-color); /* Red background for info sections */
+    padding: 30px 20px; /* Padding inside info sections */
+    margin-bottom: 20px; /* Space below each info section */
+    border-radius: 8px; /* Consistent rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.info-section .section-title {
+    font-family: var(--font-body); /* Apply body font to section titles */
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Responsive font size for section titles */
+    color: var(--text-dark); /* Dark text color */
+    text-align: center; /* Center align section titles */
+    margin-bottom: 20px; /* Space below title */
+    padding-bottom: 10px; /* Padding below title */
+    border-bottom: 2px solid rgba(0,0,0,0.1); /* Subtle separator line */
+}
+
+.info-section ul {
+    list-style: none; /* Removes default list bullets */
+    padding: 0; /* Removes default list padding */
+    text-align: center; /* Center align list items */
+}
+
+.info-section li {
+    color: var(--text-dark); /* Dark text color for list items */
+    font-size: clamp(1rem, 3vw, 1.2rem); /* Responsive font size for list items */
+    font-family: var(--font-body);
+    margin-bottom: 10px; /* Space between list items */
+    padding: 5px 0; /* Vertical padding for list items */
+}
+
+.info-section li strong {
+    color: var(--text-dark); /* Ensures strong text within list items is visible */
+}
+
+/* Responsive adjustments using Media Queries */
+
+/* For screens up to 768px wide (e.g., tablets) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Slightly less padding for smaller screens */
+    }
+
+    .hero, .info-section {
+        padding: 30px 15px; /* Adjust padding for sections */
+    }
+}
+
+/* For screens up to 480px wide (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .hero, .info-section {
+        padding: 20px 10px; /* Further reduce padding for very small screens */
+    }
+
+    .info-section li {
+        font-size: 1rem; /* Smaller font size for list items on mobile */
+    }
+}
